@@ -1,0 +1,10 @@
+#bin and gen contain generated files.
+bin/*
+
+# Local configuration file (sdk path, etc)
+/bin
+
+/target
+
+#files from intellij
+/.idea/
