@@ -8,3 +8,6 @@ bin/*
 
 #files from intellij
 /.idea/
+
+.settings
+.classpath
