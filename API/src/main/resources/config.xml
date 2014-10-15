@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- Dev MySQL DB credentials -->
+    <MySqlDbHost>localhost</MySqlDbHost>
+    <MySqlDbName>test_db</MySqlDbName>
+    <MySqlPortName>3306</MySqlPortName>
+    <MySqlDbUser>root</MySqlDbUser>
+    <MySqlDbPassword>root</MySqlDbPassword>
+    
+    <!-- Thread pool -->
+    <ThreadPoolSize>2</ThreadPoolSize>
+    <KeepAliveTimeSecs>5</KeepAliveTimeSecs>
+    <ScheduledThreadPoolSize>2</ScheduledThreadPoolSize>
+
+    <!-- Tomcat 7.x JDBC Connection pool -->
+    <!-- https://tomcat.apache.org/tomcat-7.0-doc/api/org/apache/tomcat/jdbc/pool/PoolProperties.html -->
+    <ApacheTomcatJdbcPoolEnable>true</ApacheTomcatJdbcPoolEnable>
+    <ApacheTomcatJdbcPoolUrlScheme>jdbc:mysql</ApacheTomcatJdbcPoolUrlScheme>
+    <ApacheTomcatJdbcPoolDriverClassName>com.mysql.jdbc.Driver</ApacheTomcatJdbcPoolDriverClassName>
+    <ApacheTomcatJdbcPoolJmxEnabled>true</ApacheTomcatJdbcPoolJmxEnabled>
+    <ApacheTomcatJdbcPoolTestWhileIdle>false</ApacheTomcatJdbcPoolTestWhileIdle>
+    <ApacheTomcatJdbcPoolTestOnBorrow>true</ApacheTomcatJdbcPoolTestOnBorrow>
+    <ApacheTomcatJdbcPoolValidationQuery>SELECT 1</ApacheTomcatJdbcPoolValidationQuery>
+    <ApacheTomcatJdbcPoolTestOnReturn>false</ApacheTomcatJdbcPoolTestOnReturn>
+    <ApacheTomcatJdbcPoolValidationIntervalMillis>30000</ApacheTomcatJdbcPoolValidationIntervalMillis>
+    <ApacheTomcatJdbcPoolMinEvictableIdleTimeMillis>30000</ApacheTomcatJdbcPoolMinEvictableIdleTimeMillis>
+    <ApacheTomcatJdbcPoolTimeBetweenEvictionRunsMillis>30000</ApacheTomcatJdbcPoolTimeBetweenEvictionRunsMillis>
+    <ApacheTomcatJdbcPoolMaxWaitMillis>10000</ApacheTomcatJdbcPoolMaxWaitMillis>
+    <ApacheTomcatJdbcPoolInitialSize>10</ApacheTomcatJdbcPoolInitialSize>
+    <ApacheTomcatJdbcPoolMinIdle>10</ApacheTomcatJdbcPoolMinIdle>
+    <ApacheTomcatJdbcPoolMaxIdle>100</ApacheTomcatJdbcPoolMaxIdle>
+    <ApacheTomcatJdbcPoolMaxActive>100</ApacheTomcatJdbcPoolMaxActive>
+    <ApacheTomcatJdbcPoolLogAbandoned>true</ApacheTomcatJdbcPoolLogAbandoned>
+    <ApacheTomcatJdbcPoolRemoveAbandoned>true</ApacheTomcatJdbcPoolRemoveAbandoned>
+    <ApacheTomcatJdbcPoolRemoveAbandonedTimeoutSecs>60</ApacheTomcatJdbcPoolRemoveAbandonedTimeoutSecs>
+    <ApacheTomcatJdbcPoolJdbcInterceptors>org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer</ApacheTomcatJdbcPoolJdbcInterceptors>
+</configuration>
