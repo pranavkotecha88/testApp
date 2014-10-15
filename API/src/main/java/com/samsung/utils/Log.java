@@ -128,12 +128,12 @@ public class Log {
 		return priorityMsg;
 	}
 
-/*	*//**
+	/**
 	 * Returns string representation of stacktrace
 	 * 
 	 * @param tr
 	 * @return
-	 *//*
+	 */
 	public static String getStackTraceString(Throwable tr) {
 		if (tr == null) {
 			return "";
@@ -155,5 +155,5 @@ public class Log {
 		tr.printStackTrace(pw);
 		pw.flush();
 		return sw.toString();
-	}*/
+	}
 }
