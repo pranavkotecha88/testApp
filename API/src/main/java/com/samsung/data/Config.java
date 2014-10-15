@@ -3,6 +3,8 @@ package com.samsung.data;
 import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.DefaultConfigurationBuilder;
 
+import com.samsung.utils.Log;
+
 public class Config {
 	private static final String TAG = Config.class.getSimpleName();
 
@@ -47,29 +49,29 @@ public class Config {
     private static String apacheTomcatJdbcPoolJdbcInterceptors;
 		
 	public static void load() throws Exception {
-		//Log.i(TAG, "load()");
+		Log.i(TAG, "load()");
 
 		DefaultConfigurationBuilder builder = null;
         // Try loading config
         for (String file : CONFIG_FILE_LIST) {
             try {
                 builder = getConfigBuilder(file);
-                //Log.i(TAG, "Loaded config file:" + file);
+                Log.i(TAG, "Loaded config file:" + file);
                 // We found the file and loaded it. Now break out of loop.
                 break;
             } catch (ConfigurationException ce) {
-               // Log.i(TAG, "Message:" + ce.getMessage());
+               Log.i(TAG, "Message:" + ce.getMessage());
             }
         }
 		if (builder != null) {
 			try {
 				Config.init(builder);
 			} catch (Exception e) {
-	//			Log.e(TAG, "Error initializing from configuration file");
+				Log.e(TAG, "Error initializing from configuration file");
 				throw new Exception("Config initialization error");
 			}
 		} else {
-		//	Log.e(TAG, "Error configuration file not found");
+			Log.e(TAG, "Error configuration file not found");
 			throw new Exception("Config initialization error");
 		}
 	}
@@ -82,7 +84,7 @@ public class Config {
     }
 
 	private static void init(DefaultConfigurationBuilder builder) {
-		//Log.i(TAG, "init()");
+		Log.i(TAG, "init()");
 		builder.setThrowExceptionOnMissing(true);
 		
 		// MySql DB config params

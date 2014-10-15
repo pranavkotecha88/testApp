@@ -24,6 +24,30 @@ public class ConfigTest extends TestCase {
 	@Test
 	public void testGetters() {
 		assertNotNull(Config.getApacheTomcatJdbcPoolDriverClassName());
+		assertNotNull(Config.getApacheTomcatJdbcPoolJdbcInterceptors());
+		assertNotNull(Config.getApacheTomcatJdbcPoolUrlScheme());
+		assertNotNull(Config.getApacheTomcatJdbcPoolValidationQuery());
+		assertNotNull(Config.getMySqlDbHost());
+		assertNotNull(Config.getMySqlDbName());
+		assertNotNull(Config.getMySqlDbPasswd());
+		assertNotNull(Config.getMySqlDbPasswd());
+		assertNotNull(Config.getTag());
+		assertNotNull(Config.getMySqlDbUser());
+		assertNotNull(Config.getApacheTomcatJdbcPoolInitialSize());
+		assertNotNull(Config.getApacheTomcatJdbcPoolMaxActive());
+		assertNotNull(Config.getApacheTomcatJdbcPoolMaxIdle());
+		assertNotNull(Config.getApacheTomcatJdbcPoolMaxWaitMillis());
+		assertNotNull(Config.getApacheTomcatJdbcPoolMinEvictableIdleTimeMillis());
+		assertNotNull(Config.getApacheTomcatJdbcPoolMinIdle());
+		assertNotNull(Config.getApacheTomcatJdbcPoolRemoveAbandonedTimeoutSecs());
+		assertNotNull(Config.getApacheTomcatJdbcPoolRemoveAbandonedTimeoutSecs());
+		assertNotNull(Config.getApacheTomcatJdbcPoolTimeBetweenEvictionRunsMillis());
+		assertNotNull(Config.getApacheTomcatJdbcPoolValidationIntervalMillis());
+		assertNotNull(Config.getKeepAliveTimeSecs());
+		assertNotNull(Config.getMySqlDbPort());
+		assertNotNull(Config.getScheduledThreadPoolSize());
+		assertNotNull(Config.getThreadPoolSize());
+		
 	}
 
 }
