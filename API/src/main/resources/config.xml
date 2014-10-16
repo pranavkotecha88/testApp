@@ -3,7 +3,7 @@
 
     <!-- Dev MySQL DB credentials -->
     <MySqlDbHost>localhost</MySqlDbHost>
-    <MySqlDbName>test_db</MySqlDbName>
+    <MySqlDbName>testapp</MySqlDbName>
     <MySqlPortName>3306</MySqlPortName>
     <MySqlDbUser>root</MySqlDbUser>
     <MySqlDbPassword>root</MySqlDbPassword>
